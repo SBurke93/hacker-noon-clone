@@ -33,17 +33,25 @@ ul {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
-div {
-    display: block;
-}
+
 header {
     display: block;
 }
 small {
     font-size: 80%;
 }
-
-
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+section {
+    width: 100%;
+}
 
 /* Page Layout */
 .page_layout {
@@ -246,24 +254,12 @@ form {
 
 
 .page_content {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
     align-items: flex-start;
+    flex: 1 1 0%;
     padding: 1px 0;
 }
-
 
 
 /* Featured Articles */
@@ -271,6 +267,9 @@ form {
     display: grid;
     grid-gap: 1px;
     grid-template-columns: 1fr;
+}
+article {
+    display: block;
 }
 .featured > article {
     border-color: #212428;
@@ -314,36 +313,30 @@ form {
 }
 .card .image_wrapper {
     position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-align-items: flex-end;
-    -webkit-box-align: flex-end;
-    -ms-flex-align: flex-end;
     align-items: flex-end;
     overflow: hidden;
     cursor: pointer;
     border-radius: 2px;
 }
-.card .image-wrapper > a {
+.card .image_wrapper > a {
     display: block;
     height: 200px;
     width: 100%;
 }
+.card .image-wrapper img {
+    max-width: 100%;
+    transition: transform 200ms ease-in-out;
+}
+.card .image-wrapper > a img {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
 .card .meta {
     padding: 10px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 .card .meta a {
@@ -388,6 +381,10 @@ form {
 
 
 
+
+
+
+
 /* media queries */
 
 @media screen and (min-width: 768px) {
@@ -424,6 +421,10 @@ form {
     }
     .featured > article:nth-child(3), .featured > article:nth-child(4), .featured > article:nth-child(5) {
         grid-column: span 2;
+    }
+    .featured > article:nth-child(1) h2, .featured > article:nth-child(2) h2 {
+        font-size: 2.5rem;
+        padding: 0;
     }
     .sub_nav {
         font-size: 1.6rem;
