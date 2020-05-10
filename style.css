@@ -96,7 +96,12 @@ a {
     text-decoration: none;
 }
  
-
+a, button {
+    outline: none;
+}
+button, select {
+    text-transform: none;
+}
 
 
 /* ========  Main Nav  ========== */
@@ -180,22 +185,25 @@ form {
 }
 
 .dark_mode_toggle {
-    font-size: 3rem;
-    color: var(--secondary);
-    position: relative;
-    width: 60px;
-    height: 60px;
-    background-color: rgba(0,0,0,0.1);
-    border: 0;
-    overflow: hidden;
-    cursor: pointer;
-    margin-right: 60px;
-}
+        font-size: 3rem;
+        color: rgb(0, 59, 0);
+        position: relative;
+        width: 60px;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        margin-right: 60px;
+        border-width: 0px;
+        border-style: initial;
+        border-color: initial;
+        border-image: initial;
+        overflow: hidden;
+    }
 
 
 
 
-/* ========  Sub Nav  ========== */
+/* ========  Sub_Nav  ========== */
 
 .sub_nav {
     background-color: var(--secondary);
@@ -237,7 +245,7 @@ form {
 
 
 
-/* == NAV AD == */
+/* == NAV_AD == */
 
 .nav_ad {
     background-color: #f5ec43;
@@ -246,6 +254,16 @@ form {
     font-size: 1.2rem;
 }
 
+.nav_ad a {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    color: rgb(102, 97, 5) !important;
+    padding: 10px;
+}
+ 
 .nav_ad img {
     margin-right: 10px;
     width: 25px;
@@ -258,7 +276,7 @@ form {
 
 
 
-/* ===== MAIN CLASS ===== */
+/* ===== MAIN_CLASS ===== */
 .page_content {
     display: flex;
     justify-content: center;
@@ -269,7 +287,10 @@ form {
 
 
 
-/* == FEATURED ARTICLES == */
+
+
+
+/* == FEATURED_ARTICLES == */
 .featured {
     display: grid;
     grid-gap: 1px;
@@ -283,6 +304,9 @@ form {
     background-color: #212428;
     grid-gap: 0;
     border: none;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
 }
 .featured > article h2 {
     font-size: 2rem;
@@ -305,13 +329,20 @@ form {
 
 
 
-/* == FEATURED CARD ==*/
-.card {
+
+
+
+
+/* == FEATURED_CARDS ==*/
+.card { 
     display: grid;
-    grid-template-rows: minmax(80px,auto) 1fr auto;
-    grid-gap: 10px;
+    grid-template-rows: minmax(80px, auto) 1fr auto;
+    gap: 10px;
     border-radius: 2px;
-    border: 2px solid #f1f3f5;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(241, 243, 245);
+    border-image: initial;
 }
 .card h2 {
     font-size: 2rem;
@@ -434,6 +465,7 @@ form {
     }
 }
 
+
 @media screen and (min-width: 768px) {
 
     .header_layout .main_nav .logo + form + div,
@@ -475,6 +507,14 @@ form {
     .container section {
         margin-bottom: 50px;
     }
+
+    .featured > article:nth-child(1) .image_wrapper > a, 
+    .featured > article:nth-child(2) .image_wrapper > a, 
+    .featured > article:nth-child(1) .image_wrapper > a img, 
+    .featured > article:nth-child(2) .image_wrapper > a img {
+        height: 300px;
+    }
+
 }
 
 
