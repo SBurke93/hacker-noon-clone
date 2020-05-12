@@ -54,6 +54,13 @@ h2 {
     margin-inline-end: 0px;
     font-weight: bold;
 }
+
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
 /* section {
     width: 100%;
 } */
@@ -84,6 +91,41 @@ h2 {
 }
 .header_layout .main_nav > a > img {
     max-height: 40px;
+}
+.header_layout .main_nav > a > img.mobile {
+    display: block;
+}
+.header_layout .main_nav > a > img.desktop {
+    display: none;
+}
+
+.header_layout .main_nav .search_container {
+    position: relative;
+    margin-right: 1rem;
+}
+.header_layout .main_nav .search_container img {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 19px;
+    transform: translate(0px, -50%);
+    cursor: pointer;
+    filter: brightness(2);
+}
+.header_layout .main_nav .search_container  input{
+    font-size: 1.6rem;
+    font-weight: bold;
+    width: 0px;
+    opacity: 0;
+    outline-color: rgb(0, 187, 0);
+    background: rgba(0, 0, 0, 0.1);
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    padding: 10px 20px;
+    border-radius: 2px;
+    transition: all 120ms ease-in-out 0s;
 }
 
 
@@ -133,10 +175,7 @@ button, select {
     position: relative;
     margin-right: 1rem;
 }
-form {
-    display: block;
-    margin-top: 0em;
-}
+
 .main_nav .search_container img {
     position: absolute;
     top: 50%;
@@ -398,6 +437,17 @@ form {
     -ms-flex-align: start;
     align-items: start;
 }
+
+.profile-layout h3 {
+    font-size: 1.6rem;
+    margin: 0px 0px 2rem;
+}
+
+.profile-layout h3 small {
+display: block;
+margin-top: 0.5rem;
+}
+
 .profile_layout > a > img {
     max-width: 50px;
     box-shadow: 0 0.2em #9AA5B1, 0 -0.2em #9AA5B1, 0.2em 0 #9AA5B1, -0.2em 0 #9AA5B1;
@@ -481,6 +531,9 @@ form {
     }
     .header_layout .main_nav > a > img.desktop {
         display: block;
+    }
+    .header_layout .main_nav > a > img.mobile {
+        display: none;
     }
     .nav_ad {
         font-size: 1.6rem;
