@@ -205,13 +205,7 @@ button, select {
 
 .social_links > * {
         background: none;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-align-items: flex-end;
-        -webkit-box-align: flex-end;
-        -ms-flex-align: flex-end;
         align-items: flex-end;
         margin-left: 15px;
 }
